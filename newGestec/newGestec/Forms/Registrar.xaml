@@ -1,0 +1,76 @@
+﻿<Window x:Class="newGestec.Forms.Registrar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:newGestec.Forms"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:wpfx="http://schemas.xceed.com/wpf/xaml/toolkit"
+        mc:Ignorable="d"
+        Title="Registrar" Height="500" Width="800"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" 
+        FontFamily="Segoe UI Emoji">
+    <Grid Background="#FF82D1DF">
+
+        <Rectangle Height="280" VerticalAlignment="Top" Fill="#FF0098DA"/>
+
+
+        <Rectangle x:Name="ConteinerPrincipal" Width="700" Height="240" VerticalAlignment="Bottom" Margin="0,80" RadiusY="10" RadiusX="10" Fill="White">
+            <Rectangle.Effect>
+                <DropShadowEffect BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1" Color="#FFBBBBBB"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <StackPanel VerticalAlignment="Bottom" Margin="50,80" Height="240" Orientation="Horizontal" >
+            <GroupBox Width="330" Margin="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <Label Content="CREDENCIAS DO ADMINISTRADOR" FontFamily="Century Gothic" FontSize="18" Foreground="#888" HorizontalAlignment="Center"/>
+                    <StackPanel Grid.Row="1" VerticalAlignment="Center" Margin="15">
+                        <TextBox Margin="0,10" materialDesign:HintAssist.Hint="NOME" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+                        <PasswordBox Margin="0,10" materialDesign:HintAssist.Hint="SENHA" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+                    </StackPanel>
+                </Grid>
+            </GroupBox>
+            <GroupBox Width="330" Margin="10">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Grid.ColumnSpan="2" Content="REGISTRAR" FontFamily="Century Gothic" FontSize="18" Foreground="#888" HorizontalAlignment="Center"/>
+                    <TextBox Grid.Column="0" Grid.Row="1" Margin="10" materialDesign:HintAssist.Hint="NOME" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+                    <PasswordBox Grid.Column="1" Grid.Row="1" Margin="10" materialDesign:HintAssist.Hint="SENHA" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
+                    
+                    <Label Grid.Column="0" Grid.Row="2" Content="CPF" FontFamily="Century Gothic" FontSize="18" Foreground="#888" HorizontalAlignment="Center"/>
+                    <Label Grid.Column="1" Grid.Row="2" Content="NASCIMENTO" FontFamily="Century Gothic" FontSize="18" Foreground="#888" HorizontalAlignment="Center"/>
+                    
+                    <wpfx:MaskedTextBox Grid.Column="0" Grid.Row="3" Width="100" Height="30" Mask="000,000,000,00"/>
+                    <wpfx:MaskedTextBox Grid.Column="1" Grid.Row="3" Width="75" Height="30" Mask="00/00/0000"/>
+                </Grid>
+            </GroupBox>
+        </StackPanel>
+            <TextBlock x:Name="tbRegistrar" Text="JÁ É USUÁRIO?" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="30" Foreground="#FFF" Cursor="Hand" FontFamily="Century Gothic"/>
+        <Image x:Name="LogoLogin" Source="..\Images\User-White.png" Width="100" Height="100" VerticalAlignment="Top" Margin="30"/>
+        <Button x:Name="BtnLogar" Width="150" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,65" Content="REGISTRAR" FontFamily="Century Gothic"/>
+        <Button VerticalAlignment="Top" HorizontalAlignment="Right" Width="30" Height="30" Margin="2" Background="{x:Null}" Foreground="#FFF"
+                Style="{StaticResource MaterialDesignFloatingActionLightButton}">
+            <materialDesign:PackIcon Kind="Shutdown"/>
+        </Button>
+    </Grid>
+</Window>
