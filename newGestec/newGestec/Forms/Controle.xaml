@@ -5,8 +5,69 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:newGestec.Forms"
         mc:Ignorable="d"
-        Title="Controle" Height="450" Width="800">
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Controle" Height="1000" Width="1200" 
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" 
+        FontFamily="Century Gothic">
     <Grid>
-        
+        <Rectangle Height="40" VerticalAlignment="Top" Fill="#FF0098DA"/>
+        <Grid Width="300" Height="960" VerticalAlignment="Bottom" HorizontalAlignment="Left">
+            <Rectangle Height="940" VerticalAlignment="Bottom" Margin="0,10" RadiusY="10" RadiusX="10" Fill="#EEE">
+                <Rectangle.Effect>
+                    <DropShadowEffect BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1" Color="#FFBBBBBB"/>
+                </Rectangle.Effect>
+            </Rectangle>
+            <Image Source="..\Images\Untitled-1.png" VerticalAlignment="Top" HorizontalAlignment="Center" Width="280" Height="100" Margin="10"/>
+            <Button VerticalAlignment="Top" Margin="50 100 50 10" Height="40">
+                <Grid Width="150">
+                    <materialDesign:PackIcon Kind="User"/>
+                    <TextBlock Text="USUÁRIOS" HorizontalAlignment="Center"/>
+                </Grid>
+            </Button>
+
+            <Button VerticalAlignment="Top" Margin="50 175 50 10" Height="40">
+                <Grid Width="150">
+                    <materialDesign:PackIcon Kind="Worker"/>
+                    <TextBlock Text="PROFISSIONAIS" HorizontalAlignment="Center"/>
+                </Grid>
+            </Button>
+
+            <Button VerticalAlignment="Top" Margin="50 250 50 10" Height="40">
+                <Grid Width="150">
+                    <materialDesign:PackIcon Kind="Business"/>
+                    <TextBlock Text="EMPRESAS" HorizontalAlignment="Center"/>
+                </Grid>
+            </Button>
+
+            <Button VerticalAlignment="Top" Margin="50 325 50 10" Height="40">
+                <Grid Width="150">
+                    <materialDesign:PackIcon Kind="Search"/>
+                    <TextBlock Text="VAGAS" HorizontalAlignment="Center"/>
+                </Grid>
+            </Button>
+
+            <Button VerticalAlignment="Top" Margin="50 400 50 10" Height="40">
+                <Grid Width="150">
+                    <materialDesign:PackIcon Kind="Briefcase"/>
+                    <TextBlock Text="CARGOS" HorizontalAlignment="Center"/>
+                </Grid>
+            </Button>
+
+            <Button VerticalAlignment="Top" Margin="50 475 50 10" Height="40">
+                <Grid Width="150">
+                    <materialDesign:PackIcon Kind="Email"/>
+                    <TextBlock Text="E-MAIL" HorizontalAlignment="Center"/>
+                </Grid>
+            </Button>
+
+            <Button VerticalAlignment="Top" Margin="50 550 50 10" Height="40">
+                <Grid Width="150">
+                    <materialDesign:PackIcon Kind="Bible"/>
+                    <TextBlock Text="BÍBLIA" HorizontalAlignment="Center"/>
+                </Grid>
+            </Button>
+        </Grid>
     </Grid>
 </Window>

@@ -16,7 +16,6 @@
 
         <Rectangle Height="280" VerticalAlignment="Top" Fill="#FF0098DA"/>
 
-
         <Rectangle x:Name="ConteinerPrincipal" Width="280" Height="240" VerticalAlignment="Bottom" Margin="0,80" RadiusY="10" RadiusX="10" Fill="White">
             <Rectangle.Effect>
                 <DropShadowEffect BlurRadius="15" Direction="0" RenderingBias="Quality" ShadowDepth="1" Color="#FFBBBBBB"/>
