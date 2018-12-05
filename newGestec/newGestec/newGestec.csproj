@@ -115,6 +115,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DTO\EmpresaDTO.cs" />
+    <Compile Include="DTO\ProfissionaisDTO.cs" />
+    <Compile Include="DTO\UsuariosDTO.cs" />
     <Compile Include="Forms\Controle.xaml.cs">
       <DependentUpon>Controle.xaml</DependentUpon>
     </Compile>
@@ -159,7 +162,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DAL\" />
-    <Folder Include="DTO\" />
     <Folder Include="Paginas\" />
   </ItemGroup>
   <ItemGroup>
